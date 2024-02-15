@@ -61,4 +61,3 @@ function game(){
     }
     alert(wincount>2 ? "you won "+wincount+" rounds. you have won":"you won "+wincount+" rounds. you have lost");
 }
-game();

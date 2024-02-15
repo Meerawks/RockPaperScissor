@@ -168,6 +168,7 @@ function moveFill (winner, playerChoice, computerChoice){
         document.querySelector('#computer-number').innerText=computerScore;
         document.querySelector('#player-number').innerText=playerScore;
         textResult.innerText='First to reach 5 score wins';
+        textResult.style.color='#15F5BA';
         percent=50;
         fillBar.style.width=percent + "%";
         turnIcon.style.setProperty("-webkit-filter", "drop-shadow(0px 0px 0px #1A0D3C)");

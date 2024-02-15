@@ -4,10 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock Paper Scissor</title>
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
     <link rel="stylesheet" type="text/css" rel="noopener" target="_blank" href="styles.css">
+    <link rel="icon" type="image/png" href="./images/title-icon2.png">
     <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,800;1,800&display=swap" rel="stylesheet">
 </head>
@@ -16,26 +19,39 @@
     <div class="fill-bar2" id="fill-bar2"></div>
     <h1>Rock Paper Scissor</h1>
         <div class="result-call">
-            <p id="result-text">You win!</p>
+            <p id="result-text">First to reach 5 score wins</p>
+        </div>
+        <div class="win-count">
+            <div class="player">
+            <p class="player-score" id="player-score"> Your score: </p>
+            <p style="font-size: xx-large;" id="player-number">0</p>
         </div>
         <div class="round"  id="round">
 
         </div>
+        <div class="computer">
+        <p class="computer-score" id="computer-score"> Computer's score: </p>
+        <p style="font-size: xx-large;" id="computer-number">0</p>
+    </div>
+    </div>
         <p class="instructions">Click to choose a move</p>
         <div class="icons">
-            <div class="icon-text">
-            <img src="./images/rock.png" alt="scissor hand">
+            <div class="icon-text" >
+            <img id="icon-1" src="./images/rock.png" alt="scissor hand">
             <p>Rock</p>
         </div>
-        <div class="icon-text">
-            <img src="./images/paper.png" alt="scissor hand">
+        <div class="icon-text" >
+            <img id="icon-2" src="./images/paper.png" alt="scissor hand">
             <p>Paper</p>
          </div>
-            <div class="icon-text">
-            <img src="./images/scissor.png" alt="scissor hand">
+            <div class="icon-text" >
+            <img id="icon-3" src="./images/scissor.png" alt="scissor hand">
             <p>Scissor</p>
         </div>
         </div>
+        <div class="play-again">
+            <button class="btn"><i class="fa fa-repeat"> <span style="font-family: 'Montserrat'; font-weight: 900;">Retry</span></i></button>
+    </div>
         
 </body>
 </html>

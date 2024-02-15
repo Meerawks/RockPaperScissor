@@ -2,7 +2,8 @@
     --dark-purple:#211951;
     --neon-highlight: #15F5BA;
     --light-purple:#836FFF;
-
+    --yellow-highlight:#ECEE81;
+    --neon-shadow:#100329;
 }
 *{
     font-family: 'Montserrat';
@@ -25,7 +26,7 @@ body{
     top:0;
 }
 .fill-bar2{
-    width: 100%;
+    width: 50vw;
     position:absolute;
     top:0;
     z-index: 10;
@@ -38,16 +39,41 @@ h1{
     margin: 50px;
 }
 #result-text{
+    color: var(--neon-highlight);
     text-align: center;
     font-size: x-large;
     margin: 30px;
 }
+.win-count{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 3%;
+    gap: 40px;
+  
+   
+}
+.player-score,.computer-score{
+    font-size: large;
+    text-align: center;
+}
+.player,.computer{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+}
 .round{
-    width:500px;
-    height: 200px;
-    background-color: #14052b8e;
+    height: 180px;
+    width: 400px;
+    padding: 40px;
+    background-color: #1A0D3C;
     border-radius: 5%;
-    margin: 0 auto;
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
 }
 .icons{
     margin: 60px;
@@ -62,17 +88,45 @@ h1{
     align-items: center;
     gap: 20px;
 }
+#icon-1,#icon-2,#icon-3{
+    transition: 0.3s;
+
+}
+#icon-1:hover,
+#icon-2:hover,
+#icon-3:hover{
+    transform: scale(110%);
+    -webkit-filter: drop-shadow(3px 3px 8px var(--neon-highlight));
+  filter: drop-shadow(3px 3px 8px var(--neon-highlight));
+}
 img{
     width: 100px;
 
     /* background-color: #836FFF;
     border-radius: 20%;
     padding: 10px; */
-    -webkit-filter: drop-shadow(3px 3px 8px var(--neon-highlight));
-  filter: drop-shadow(3px 3px 8px var(--neon-highlight));
+    -webkit-filter: drop-shadow(3px 3px 8px #14052b8e);
+  filter: drop-shadow(3px 3px 8px #14052bf6);
 }
 .instructions{
     margin: 20px;
     text-align: center;
     font-size:x-large;
+}
+.play-again{
+    text-align: center;
+}
+button{
+    padding:15px;
+    font-size: 'Montserrat';
+    background-color: #14052b8e;
+    border-style: none;
+    font-weight: 900;
+    border-radius: 5%;
+    transition: 0.3s;
+}
+button:hover{
+    transform: scale(110%);
+    -webkit-filter: drop-shadow(5px 5px 8px var(--neon-shadow));
+  filter: drop-shadow(5px 5px 8px var(--neon-shadow));
 }

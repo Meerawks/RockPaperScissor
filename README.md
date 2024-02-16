@@ -1,1 +1,1 @@
-rock paper scissor game to practice javascipt.
+Rock Paper Scissor Game | Practicing DOM manipulation

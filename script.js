@@ -35,10 +35,6 @@ playerPaperIcon.classList.add('img-pop')
 playerScissorIcon.classList.add('img-pop')
 playerScissorIcon.style.width=150+ "px";
 const btnRetry=document.querySelector('button');
-const winnerPaperPlayer=document.createElement('img');
-winnerPaperPlayer.src='./images/paperwinnerplayer.png';
-winnerPaperPlayer.style.width=150+ "px";
-winnerPaperPlayer.classList.add('img-pop');
 let width = fillBar.offsetWidth;
 let parentWidth =fillBar.offsetParent.offsetWidth;
 let percent = Math.round(100 * width / parentWidth);

@@ -4,8 +4,8 @@
     --light-purple:#836FFF;
     --yellow-highlight:#ECEE81;
     --neon-shadow:#100329;
-}
-*{
+    }
+    *{
     font-family: 'Montserrat';
     font-size: 22px;;
     font-size: medium;
@@ -13,110 +13,112 @@
     color: white;
     margin: 0px;
     padding: 0px;
-   
-  }
-body{
+    
+    }
+    body{
     background-color: #211951;
-}
-.fill-bar1{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: space-between;
+    }
+    .fill-bar1{
     width: 100%;
     background-color: red;
     height: 10px;
     position: absolute;
     top:0;
-}
-.fill-bar2{
+    }
+    .fill-bar2{
     width: 50vw;
     position:absolute;
     top:0;
     z-index: 10;
     background-color: var(--neon-highlight);
     height: 10px;
-}
-h1{
+    }
+    h1{
     font-size: xx-large;
     text-align: center;
     margin: 50px;
-}
-#result-text{
+    }
+    #result-text{
     color: var(--neon-highlight);
     text-align: center;
     font-size: x-large;
     margin: 30px;
-}
-.win-count{
+    }
+    .win-count{
     display: flex;
     align-items: center;
     justify-content: center;
     margin-left: 3%;
     gap: 40px;
-  
-   
-}
-.player-score,.computer-score{
+    
+    
+    }
+    .player-score,.computer-score{
     font-size: large;
     text-align: center;
-}
-.player,.computer{
+    }
+    .player,.computer{
     display: flex;
     flex-direction: column;
     gap: 10px;
     text-align: center;
-}
-.round{
+    }
+    .round{
     height: 180px;
-    width: 400px;
+    width: 600px;
     padding: 40px;
     background-color: #1A0D3C;
     border-radius: 5%;
     
     display: flex;
     align-items: center;
-    justify-content: space-between;
-
-}
-.icons{
+    justify-content: center;
+    gap: 80px;
+    
+    }
+    .icons{
     margin: 60px;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 50px;
-}
-.icon-text{
+    }
+    .icon-text{
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 20px;
-}
-#icon-1,#icon-2,#icon-3{
+    }
+    #icon-1,#icon-2,#icon-3{
     transition: 0.3s;
-
-}
-#icon-1:hover,
-#icon-2:hover,
-#icon-3:hover{
+    
+    }
+    #icon-1:hover,
+    #icon-2:hover,
+    #icon-3:hover{
     transform: scale(110%);
     -webkit-filter: drop-shadow(3px 3px 8px var(--neon-highlight));
-  filter: drop-shadow(3px 3px 8px var(--neon-highlight));
-}
-img{
+    filter: drop-shadow(3px 3px 8px var(--neon-highlight));
+    }
+    img{
+    
     width: 100px;
-
-    /* background-color: #836FFF;
-    border-radius: 20%;
-    padding: 10px; */
     -webkit-filter: drop-shadow(3px 3px 8px #14052b8e);
-  filter: drop-shadow(3px 3px 8px #14052bf6);
-}
-.instructions{
+    filter: drop-shadow(3px 3px 8px #14052bf6);
+    }
+    .instructions{
     margin: 20px;
     text-align: center;
     font-size:x-large;
-}
-.play-again{
+    }
+    .play-again{
     text-align: center;
-}
-button{
+    }
+    button{
     padding:15px;
     font-size: 'Montserrat';
     background-color: #14052b8e;
@@ -124,9 +126,73 @@ button{
     font-weight: 900;
     border-radius: 5%;
     transition: 0.3s;
-}
-button:hover{
+    
+    }
+    button:hover{
     transform: scale(110%);
     -webkit-filter: drop-shadow(5px 5px 8px var(--neon-shadow));
-  filter: drop-shadow(5px 5px 8px var(--neon-shadow));
-}
+    filter: drop-shadow(5px 5px 8px var(--neon-shadow));
+    }
+    .footer{
+    text-align: center;
+    margin-top: 30px;
+    background-color: #100329;
+    padding: 20px;
+    }
+    .github-link{
+    color: var(--light-purple);
+    transition: 0.3s;
+    }
+    .github-link:hover{
+    color: var(--neon-highlight);
+    }
+    .img-pop{
+    
+    animation: showPlayer 0.6s 0.1s cubic-bezier(0.38, 0.97, 0.56, 0.76) forwards;
+    opacity: 0;
+    
+    transform: scale(1.2);
+    
+    }
+    .computer-pop{
+    animation: showComputer 0.6s 0.1s cubic-bezier(0.38, 0.97, 0.56, 0.76) forwards;
+    opacity: 0;
+    
+    transform: scale(1.2);
+    }
+    .winner{
+    
+    filter: brightness(0) saturate(100%) invert(83%) sepia(50%) saturate(1059%) hue-rotate(360deg) brightness(106%) contrast(104%);
+    
+    }
+    @keyframes showComputer {
+    0%{
+    transform: translateX(80px);
+    
+    }
+    100% {
+    
+    transform: translateX(0px);
+    
+    
+    
+    opacity: 1;
+    
+    }
+    }
+    @keyframes showPlayer {
+    0%{
+    transform: translateX(-80px);
+    
+    }
+    100% {
+    
+    transform: translateX(0px);
+    
+    
+    
+    opacity: 1;
+    
+    }
+    }
+    
